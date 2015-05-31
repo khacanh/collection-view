@@ -40,10 +40,10 @@ class Photo {
     let image = UIImage(named: photo!)?.decompressedImage
     self.init(caption: caption!, comment: comment!, image: image!)
   }
-
+  
   func heightForComment(font: UIFont, width: CGFloat) -> CGFloat {
     let rect = NSString(string: comment).boundingRectWithSize(CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .UsesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
     return ceil(rect.height)
   }
-
+  
 }

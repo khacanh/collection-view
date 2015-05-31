@@ -53,7 +53,9 @@
 				7B0AC7B81AAEF90000885D4A /* Pinterest */,
 				7B0AC7B71AAEF90000885D4A /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		7B0AC7B71AAEF90000885D4A /* Products */ = {
 			isa = PBXGroup;

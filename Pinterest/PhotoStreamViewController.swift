@@ -12,7 +12,7 @@ import AVFoundation
 class PhotoStreamViewController: UICollectionViewController {
   
   var photos = Photo.allPhotos()
-
+  
   override func preferredStatusBarStyle() -> UIStatusBarStyle {
     return UIStatusBarStyle.LightContent
   }
