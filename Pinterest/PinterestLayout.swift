@@ -43,14 +43,14 @@ class PinterestLayout: UICollectionViewLayout {
   //1. Pinterest Layout Delegate
   var delegate:PinterestLayoutDelegate!
   
-  //1. Configurable properties
+  //2. Configurable properties
   var numberOfColumns = 2
   var cellPadding: CGFloat = 6.0
   
-  //2. Array to keep a cache of attributes.
+  //3. Array to keep a cache of attributes.
   private var cache = [PinterestLayoutAttributes]()
   
-  //3. Content height and size
+  //4. Content height and size
   private var contentHeight:CGFloat  = 0.0
   private var contentWidth: CGFloat {
     let insets = collectionView!.contentInset
@@ -62,10 +62,10 @@ class PinterestLayout: UICollectionViewLayout {
   }
   
   override func prepareLayout() {
-    // 1. only recalculate once
+    // 1. Only calculate once
     if cache.isEmpty {
       
-      // 2. Pre-Calculates the X Offset for every column and add an array to track the max Y position for every column
+      // 2. Pre-Calculates the X Offset for every column and adds an array to increment the currently max Y Offset for each column
       let columnWidth = contentWidth / CGFloat(numberOfColumns)
       var xOffset = [CGFloat]()
       for column in 0 ..< numberOfColumns {
@@ -119,3 +119,5 @@ class PinterestLayout: UICollectionViewLayout {
     return layoutAttributes
   }
 }
+
+

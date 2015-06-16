@@ -58,10 +58,13 @@ extension PhotoStreamViewController : PinterestLayoutDelegate {
   
   // 2. Returns the annotation size based on the text
   func collectionView(collectionView: UICollectionView, heightForAnnotationAtIndexPath indexPath: NSIndexPath, withWidth width: CGFloat) -> CGFloat {
+    let annotationPadding = CGFloat(4)
+    let annotationHeaderHeight = CGFloat(17)
+    
     let photo = photos[indexPath.item]
     let font = UIFont(name: "AvenirNext-Regular", size: 10)!
     let commentHeight = photo.heightForComment(font, width: width)
-    let height = 4 + 17 + commentHeight + 4
+    let height = annotationPadding + annotationHeaderHeight + commentHeight + annotationPadding
     return height
   }
 }
